@@ -12,11 +12,11 @@ import random
 import time
 
 def intro():
-    print("May I ask you for your name?")
+    print("\nMay I ask you for your name?")
     name = input()  # asks for the name
     print(name + ", we are going to play a game. I am thinking of a number between 1 and 100")
     time.sleep(.5)
-    print("Go ahead. Guess!")
+    print("Go ahead. Guess!\n")
     return name
 
 def pick(name):
@@ -41,9 +41,6 @@ def pick(name):
                             print("High, but you're getting close!")
                         else:
                             print("The guess of the number that you have entered is too high")
-                    elif guess != number:
-                        time.sleep(.5)
-                        print("Try Again!")
                 if guess == number:
                     break
             elif guess > 100 or guess < 1:
@@ -51,11 +48,11 @@ def pick(name):
                 time.sleep(.25)
                 print("Please enter a number between 1 and 100")
         except ValueError:
-            print("I don't think that " + enter + " is a number. Sorry")
+            print("I don't think that " + enter + " is a number. Sorry!\n")
 
     if guess == number:
         guessesTaken = str(guessesTaken)
-        print('Good job, ' + name + '! You guessed my number in ' + guessesTaken + ' guesses!')
+        print('Good job, ' + name + '! You guessed my number in ' + guessesTaken + ' guesses!\n')
     else:
         print('Nope. The number I was thinking of was ' + str(number))
     return name
