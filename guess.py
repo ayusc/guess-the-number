@@ -1,7 +1,7 @@
 """
 My modifications to the given code:
 	
-	1) Remember player name
+    1) Remember player name
     2) Make the guess between 1-100 only
     3) Add additional information about the number such as close, too close, too high etc...
 	
