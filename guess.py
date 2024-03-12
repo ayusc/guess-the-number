@@ -33,12 +33,12 @@ def pick(name):
                 if guessesTaken < 6:
                     if guess < number:
                         if number - guess <= 5:
-                            print("Too low, but you're getting close!")
+                            print("Low, but you're getting close!")
                         else:
                             print("The guess of the number that you have entered is too low")
                     elif guess > number:
                         if guess - number <= 5:
-                            print("Too high, but you're getting close!")
+                            print("High, but you're getting close!")
                         else:
                             print("The guess of the number that you have entered is too high")
                     elif guess != number:
