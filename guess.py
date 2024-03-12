@@ -1,3 +1,13 @@
+"""
+My modifications to the given code:
+	
+	1) Remember player name
+    2) Make the guess between 1-100 only
+    3) Add additional information about the number such as close, too close, too high etc...
+	
+~ Ayus Chatterjee	
+"""
+
 import random
 import time
 
@@ -22,9 +32,15 @@ def pick(name):
                 guessesTaken += 1
                 if guessesTaken < 6:
                     if guess < number:
-                        print("The guess of the number that you have entered is too low")
+                        if number - guess <= 5:
+                            print("Too low, but you're getting close!")
+                        else:
+                            print("The guess of the number that you have entered is too low")
                     elif guess > number:
-                        print("The guess of the number that you have entered is too high")
+                        if guess - number <= 5:
+                            print("Too high, but you're getting close!")
+                        else:
+                            print("The guess of the number that you have entered is too high")
                     elif guess != number:
                         time.sleep(.5)
                         print("Try Again!")
@@ -52,4 +68,4 @@ while True:
         playagain = input("Invalid input. Please enter 'yes' or 'no' / 'y' or 'n': ").lower()
     if playagain in ("no", "n"):
         break
-    
+            
