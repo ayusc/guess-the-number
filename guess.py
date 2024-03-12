@@ -65,4 +65,7 @@ while True:
         playagain = input("Invalid input. Please enter 'yes' or 'no' / 'y' or 'n': ").lower()
     if playagain in ("no", "n"):
         break
-            
+    elif playagain in ("yes", "y"):
+        print(f"\n{name}, Let's play again!")
+        print("I am thinking of a number between 1 and 100")
+        print("Go ahead. Guess!\n")
